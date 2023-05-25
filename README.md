@@ -69,7 +69,8 @@ queue.append(value) #将数值从入口处加入**
 [leetcode](https://leetcode.com/problems/top-k-frequent-elements/)\
 [reading](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.md)\
 [video](https://www.bilibili.com/video/BV1Xg41167Lz/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
-Use priority queue，everytime pop out the smallest number in the queue.
+堆heap是一棵完全二叉树，树中每个结点的值都不小于（或不大于）其左右孩子的值。 如果父亲结点是大于等于左右孩子就是大顶堆，小于等于左右孩子就是小顶堆.\
+Here we use priority queue to realize the min heap(小顶堆, 堆头是最小元素). And everytime pop out the smallest number in the queue.
 ```python
 # Used heapq
 import heapq
@@ -93,7 +94,8 @@ class Solution:
 ```
 
 ## Conclusion for stack and queue
-
+[Worth reading!!!](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%E6%80%BB%E7%BB%93.md)\
+This article draws a conclusion on stack and queue knowledge and how to use them to solve classic problems! 
 
 
 
