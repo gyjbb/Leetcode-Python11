@@ -1,6 +1,6 @@
 # Leetcode-Python11
 
-## 239. Sliding Window Maximum
+## 239. Sliding Window Maximum, 347. Top K Frequent Elements, Conclusion for stack and queue
 
 May 24, 2023  4h
 
@@ -65,5 +65,78 @@ Attention for the deque():\
 queue[-1] 入口/队列后端 pop(): 从入口处弹出元素\
 queue.append(value) #将数值从入口处加入**
 
-##
+## 347. Top K Frequent Elements
+[leetcode](https://leetcode.com/problems/top-k-frequent-elements/)\
+[reading](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.md)\
+[video](https://www.bilibili.com/video/BV1Xg41167Lz/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
+Use priority queue，everytime pop out the smallest number in the queue.\
+```python
+# Used heapq
+import heapq
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        #要统计元素出现频率
+        map_ = {}
+        for i in range(len(nums)):
+            map_[nums[i]] = map_.get(nums[i], 0) + 1
+        #对频率排序
+        pri_que = []
+        for key, freq in map_.items():
+            heapq.heappush(pri_que, (freq, key))
+            if len(pri_que)>k:   #如果堆的大小大于了K，则队列弹出，保证堆的大小一直为k
+                heapq.heappop(pri_que)
+        #找出前K个高频元素，因为小顶堆先弹出的是最小的，所以倒序来输出到数组
+        result = [0]*k
+        for i in range(k-1, -1, -1):
+            result[i] = heapq.heappop(pri_que)[1]
+        return result
+```
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+## Conclusion for stack and queue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
