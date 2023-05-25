@@ -5,7 +5,7 @@
 May 24, 2023  4h
 
 The eleventh day. Today we will learn about the queue and use it to solve problems.\
-The challenges today are about ~~need to delete later~~.
+The challenges today are about how to use queue to get the maximum value in a sliding window(we maintain the max one at the exit of the queue every tome we move the window), and how to use priority queue to realize heap, and get k most frequent numbers. We can see that queue is useful in the dynamic window problems.
 
 ## 239. Sliding Window Maximum
 [leetcode](https://leetcode.com/problems/sliding-window-maximum/)\
