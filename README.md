@@ -62,6 +62,8 @@ class MyQueue:
 ```
 Attention for the deque():\
 **queue[0] 出口/队列前端 popleft(): 从出口弹出元素\
-queue[-1] 入口/队列后端 pop(): 从入口处弹出元素**
+queue[-1] 入口/队列后端 pop(): 从入口处弹出元素\
+queue.append(value) #将数值从入口处加入**
 
+##
 
