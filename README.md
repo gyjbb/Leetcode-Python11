@@ -23,9 +23,9 @@ We would like our code to have these functions, and we can self define them to h
 > };
 
 其实队列没有必要维护窗口里的所有元素，只需要维护有可能成为窗口里最大值的元素就可以了。\
-设计单调队列的时候，以上pop，和push函数操作要保持如下规则：\
+设计单调队列的时候，以上pop，和push函数操作要保持如下规则：
 - pop(value)：如果窗口移除的元素value等于单调队列的**出口**元素，那么队列弹出元素，否则不用任何操作\
-- push(value)：如果push的元素value大于**入口**元素的数值，那么就将队列入口的元素弹出，直到push元素的数值小于等于队列入口元素的数值为止，此时push的元素是下一个可能的最大元素\
+- push(value)：如果push的元素value大于**入口**元素的数值，那么就将队列入口的元素弹出，直到push元素的数值小于等于队列入口元素的数值为止，此时push的元素是下一个可能的最大元素
 - 保持如上规则，每次窗口移动的时候，只要问que.front()就可以返回当前窗口的最大值。
 ```python
 # use queue and self-defined functions pop(), push(), forunt() to solve this question:
@@ -69,7 +69,7 @@ queue.append(value) #将数值从入口处加入**
 [leetcode](https://leetcode.com/problems/top-k-frequent-elements/)\
 [reading](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.md)\
 [video](https://www.bilibili.com/video/BV1Xg41167Lz/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3)\
-Use priority queue，everytime pop out the smallest number in the queue.\
+Use priority queue，everytime pop out the smallest number in the queue.
 ```python
 # Used heapq
 import heapq
@@ -91,19 +91,6 @@ class Solution:
             result[i] = heapq.heappop(pri_que)[1]
         return result
 ```
-
-
- 
-
-
-
-
-
-
-
-
-
-
 
 ## Conclusion for stack and queue
 
